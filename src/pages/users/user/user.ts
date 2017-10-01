@@ -20,6 +20,7 @@ export class UserPage implements OnInit {
     }
 
     onGoBack () {
-        this.navController.pop();
+        //this.navController.pop();
+        this.navController.popToRoot();
     }
 }
