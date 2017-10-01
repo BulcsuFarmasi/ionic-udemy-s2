@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { NavController } from 'ionic-angular';
+
+import { UserPage } from './user/user'
 
 @Component({
   selector: 'page-users',
@@ -6,5 +9,12 @@ import { Component } from '@angular/core';
 })
 export class UsersPage {
 
+  constructor (private navController:NavController) {
+
+  }
+
+  onLoadUser(name:string){
+      this.navController.push(UserPage, {userName: name});
+  }
 
 }
